@@ -1,12 +1,29 @@
 # Setup-ubuntu-on-ASUSFX504
-## resovlve touchpad and kernal update
-https://linuxhint.com/upgrade-kernel-ubuntu-1804/
+
+
 
 ## resolve reboot problem
+The reboot problem will be resolved by installling nvidia driver and change the grub file
 
-`sudo nano /etc/default/grub`
+first get the PPA repository driver
 
-` sudo update-grub
+``` sudo add-apt-repository ppa:graphics-drivers/ppa```
+
+# install nvidia driver 
+
+``` sudo apt install nvidia-384 nvidia-384-dev```
+
+```sudo nano /etc/default/grub```
+
+Edit 
+
+```GRUB_CMDLINE_LINUX_DEFAULT="quiet splash reboot=pci"```
+
+Update grub 
+
+``` sudo update-grub```
+
+Restart ubuntu and sudo reboot should run normal now. 
 
 ## mount disk space automatically 
 ` ls -al /dev/disk/by-uuid/`
@@ -21,3 +38,7 @@ adding the following lines to the fstab
 
 ## GPU-support tensorflow
 https://gist.github.com/Mahedi-61/2a2f1579d4271717d421065168ce6a73
+
+## resovlve touchpad and kernal update
+kernal update causes other issues
+https://linuxhint.com/upgrade-kernel-ubuntu-1804/
