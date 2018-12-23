@@ -1,4 +1,7 @@
 # Setup-ubuntu-on-ASUSFX504
+## resovlve touchpad and kernal update
+https://linuxhint.com/upgrade-kernel-ubuntu-1804/
+
 ## resolve reboot problem
 
 `sudo nano /etc/default/grub`
