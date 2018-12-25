@@ -1,4 +1,4 @@
-# Setup-ubuntu-on-ASUSFX504
+# Setup ubuntu on ASUS FX504
 
 
 
